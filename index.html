@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Task10</title>
+
+  
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+      }
+
+      .container {
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        width: 300px;
+      }
+
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+
+      #changingDiv {
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        white-space: pre-line;
+        flex: 1; 
+      }
+
+      .sections-container {
+        display: flex;
+      }
+
+      .section {
+        flex: 1;
+        padding: 10px;
+      }
+    </style>
+  </head>
+
+<!-- HTML Code -->
+
+  <body>
+    <div class="sections-container">
+      <div class="section">
+        <div class="container">
+          <!-- Dropdown menus ... -->
+          <label for="color">Choose Text Color:</label>
+          <select id="color">
+            <option value="black">Black</option>
+            <option value="red">Red</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+          <br /><br />
+
+          <label for="bgColor">Choose Background Color:</label>
+          <select id="bgColor">
+            <option value="white">White</option>
+            <option value="yellow">Yellow</option>
+            <option value="orange">Orange</option>
+            <option value="pink">Pink</option>
+          </select>
+          <br /><br />
+
+         
+
+          
+
+          
+        </div>
+      </div>
+
+      <div class="section">
+        <div id="changingDiv">
+          This is a sample text. You can change the properties of this Div using dropdown!
+        </div>
+      </div>
+    </div>
+
+ 
+
+    <script>
+      const colorSelect = document.getElementById("color");
+      const bgColorSelect = document.getElementById("bgColor");
+const changingDiv = document.getElementById("changingDiv");
+
+      colorSelect.addEventListener("change", () => {
+        changingDiv.style.color = colorSelect.value;
+      });
+
+      bgColorSelect.addEventListener("change", () => {
+        changingDiv.style.backgroundColor = bgColorSelect.value;
+      });
+
+
+
+
+    </script>
+  </body>
+</html>
